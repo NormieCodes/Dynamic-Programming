@@ -48,17 +48,18 @@ int main (){
   int D[n][n];
 
 
-  for (int j = 0; j < n; j++) {
   //Intialize D with INF and 0 on diagonals
 
   for (int i = 0; i < n; i++) {
+    for (int j = 0; j < n; j++) {
       if (i == j) 
         D[i][j] = 0;
 
       else 
         D[i][j] = INF;
+      }
     }
-  }
+
 
   //Now files edges into D. We know that edges = {{0, 1, 3}} means that the weight between Node 0 and Node 1 is 3.
 
